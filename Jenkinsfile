@@ -6,6 +6,12 @@ pipeline {
     }
 
     stages {
+        stage('Checkout') {
+            steps {
+                echo 'Cloning the repository...'
+                git branch: 'main', url: 'https://github.com/Ashishkumar-21/jenkins-devops-ms'
+            }
+        }
 
         stage('Build') {
             steps {
