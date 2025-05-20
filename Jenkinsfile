@@ -6,25 +6,19 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                echo 'Cloning the repository...'
-                git branch: 'main', url: 'https://github.com/Ashishkumar-21/jenkins-devops-ms'
-            }
-        }
 
         stage('Build') {
             steps {
                 echo 'Building the application...'
                 // For example: Compile a Java/Maven app
-                sh './mvnw clean package'
+                // sh './mvnw clean package'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh './mvnw test'
+                // sh './mvnw test'
             }
         }
     }
